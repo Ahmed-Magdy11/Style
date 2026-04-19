@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav-wrap">
       <div class="brand">
@@ -17,245 +19,277 @@
       </div>
       <nav class="nav-links">
         <a href="#home">الرئيسية</a>
-        <a href="#products">المنتجات</a>
-        <a href="#bags">الشنط</a>
+        <a href="#products">المنتجات <span class="nav-arr">›</span></a>
+        <a href="#bags">الشنط <span class="nav-arr">›</span></a>
         <a href="#ai">AI Stylist</a>
+        <a href="#nakaha">النخاحة <span class="nav-arr">›</span></a>
         <a href="#contact">تواصل معنا</a>
       </nav>
-      <button class="cart-btn" aria-label="سلة المشتريات">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <button class="cart-btn" aria-label="سلة">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
       </button>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">ستايلك يبدأ من هنا</span>
-          <h1>اكتشف ستايلك<br>الخاص</h1>
-          <p>ملابس وشنط مصممة بعناية عشان تعبر عن شخصيتك وتكمل أناقتك في كل لحظة، مع تجربة AI ذكية تساعدك تختار اللوك المثالي بسهولة.</p>
-          <div class="hero-actions">
-            <a href="#products" class="btn btn-primary">تسوّق الآن</a>
-            <a href="#ai" class="btn btn-secondary">جرّب AI Stylist</a>
-          </div>
-          <div class="hero-notes">
-            <span>بساطة + أناقة = اختيارك المثالي</span>
-            <span>مش مجرد لبس… ده تعبير عنك</span>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-card large-card">
-            <img src="images/5.jpeg" alt="لوك متكامل" class="hero-img" />
-            <div class="hero-card-overlay">
-              <span class="tag">New Drop</span>
-              <h3>لوك متكامل</h3>
-              <p>ملابس + شنطة + ترشيح ذكي حسب ستايلك</p>
-            </div>
-          </div>
-          <div class="hero-card small-card">
-            <img src="images/18.jpeg" alt="Minimal Chic" class="hero-img" />
-            <div class="hero-card-overlay small-overlay"><span>Minimal Chic</span></div>
-          </div>
-          <div class="hero-card small-card">
-            <img src="images/7.jpeg" alt="Urban Soft" class="hero-img" />
-            <div class="hero-card-overlay small-overlay"><span>Urban Soft</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-left">
 
-    <!-- PRODUCTS -->
-    <section id="products" class="section">
-      <div class="container">
-        <div class="section-head">
+      <!-- Card 1: AI Quiz -->
+      <div class="hcard">
+        <h1 class="htitle">
+          اكتشف ستايلك مع<br>
+          <span class="hgold">الذكاء الاصطناعي</span>
+          <span class="hstar">✦</span>
+        </h1>
+        <p class="hsub">جاوب على كام سؤال وخلي يختار الـ لوك التالي!</p>
+        <a href="#ai" class="hbtn">
+          › إبدأ الآن
+        </a>
+      </div>
+
+      <!-- Card 2: Upload -->
+      <div class="hcard hcard-upload">
+        <div class="hupload-head">
+          <div class="hcam">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
           <div>
-            <span class="eyebrow">قسم المنتجات</span>
-            <h2>أحدث التشكيلات</h2>
+            <strong>أرزفع صورتك جرب منتجاتنا!</strong>
+            <span>شوفي نفسك بالستايل اللي اخترناه لك!</span>
           </div>
-          <p>اكتشف قطع مميزة تجمع بين الراحة والأناقة، مناسبة لكل يوم ولكل مناسبة.</p>
+          <a href="#ai" class="hbtn hbtn-sm">› إبدأ الآن</a>
         </div>
-        <div id="productsGrid" class="product-grid"></div>
-        <div class="section-action center">
-          <a href="#" class="btn btn-secondary">عرض الكل</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BAGS -->
-    <section id="bags" class="section alt-section">
-      <div class="container split-grid">
-        <div>
-          <span class="eyebrow">قسم الشنط</span>
-          <h2>شنط تكمل أناقتك</h2>
-          <p>تصاميم عصرية بخامات عالية الجودة، تناسب كل ستايل وكل وقت. سواء كنتِ رايحة الشغل أو خارجة، هتلاقي الشنطة اللي تناسبك وتكمل إطلالتك.</p>
-          <div class="feature-list">
-            <span>خامات ممتازة</span>
-            <span>تصميم عملي</span>
-            <span>سهل التنسيق</span>
+        <div class="hba">
+          <div class="hba-imgs">
+            <img src="images/9.jpeg" alt="قبل" />
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9973a" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            <img src="images/10.jpeg" alt="بعد" />
           </div>
-        </div>
-        <div id="bagsGrid" class="mini-grid"></div>
-      </div>
-    </section>
-
-    <!-- AI STYLIST -->
-    <section id="ai" class="section ai-section">
-      <div class="container">
-        <div class="section-head centered">
-          <span class="eyebrow">قسم الـ AI</span>
-          <h2>خليك على طبيعتك… والباقي علينا</h2>
-          <p>جاوب على كام سؤال بسيط، وخلي الذكاء الاصطناعي يرشح لك اللوك المثالي من مجموعتنا—بسهولة وفي ثواني.</p>
-        </div>
-        <div class="ai-layout">
-          <div class="ai-panel intro-panel">
-            <div class="intro-img-wrap">
-              <img src="images/50.jpeg" alt="AI Stylist" />
-            </div>
-            <div class="intro-body">
-              <h3>Smart Stylist AI</h3>
-              <p>جاوب على ٤ أسئلة بسيطة واحصل على لوك مخصوص ليكِ من مجموعتنا.</p>
-              <button id="startAiBtn" class="btn btn-primary full-width">ابدأ تجربتك الآن</button>
-              <div class="benefits">
-                <div>ترشيحات فورية</div>
-                <div>تنسيق كامل</div>
-                <div>تجربة ممتعة</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="ai-panel quiz-panel hidden" id="quizPanel">
-            <div class="quiz-progress">
-              <span id="stepLabel">السؤال 1 من 4</span>
-              <div class="progress-bar"><div id="progressFill"></div></div>
-            </div>
-            <h3 id="questionTitle"></h3>
-            <div id="answersBox" class="answers-box"></div>
-            <div class="quiz-actions">
-              <button id="backBtn" class="btn btn-secondary">السابق</button>
-            </div>
-          </div>
-
-          <div class="ai-panel result-panel hidden" id="resultPanel">
-            <span class="result-tag">نتيجة الـ AI</span>
-            <h3 id="resultStyle"></h3>
-            <p id="resultDesc"></p>
-            <div id="resultProducts" class="result-products"></div>
-            <div class="price-row">
-              <span>السعر الإجمالي</span>
-              <strong id="totalPrice"></strong>
-            </div>
-            <div class="hero-actions">
-              <a href="#products" class="btn btn-primary">اشتري اللوك كامل</a>
-              <button id="retryBtn" class="btn btn-secondary">جرّب مرة تانية</button>
-            </div>
-          </div>
+          <a href="#ai" class="hba-btn">› جربي الآن</a>
         </div>
       </div>
-    </section>
 
-    <!-- MIX & MATCH -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Mix & Match</span>
-            <h2>نفس القطعة… أكثر من ستايل</h2>
+      <!-- Steps -->
+      <div class="hsteps">
+        <div class="hstep">
+          <div class="hstep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span class="hstep-star">✦</span>
           </div>
-          <p>اختاري قطعة واحدة وشوفي 3 طرق مختلفة لتنسيقها بأسلوب بسيط وشيك.</p>
+          <span>اختار ستايلك</span>
         </div>
-        <div class="mix-grid">
-          <div class="mix-card">
-            <div class="mix-img-wrap">
-              <img src="images/25.jpeg" alt="ستايل كاجوال" />
-            </div>
-            <div class="mix-text">
-              <h3>ستايل كاجوال</h3>
-              <p>قميص ناعم + جينز واسع + شنطة عملية</p>
+        <span class="hdots">· · ·</span>
+        <div class="hstep">
+          <div class="hstep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <span>حدد المتاسبة</span>
+        </div>
+        <span class="hdots">· · ·</span>
+        <div class="hstep">
+          <div class="hstep-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>
+            <span class="hstep-star">✦</span>
+          </div>
+          <span>احصل على اوك الوكك</span>
+        </div>
+      </div>
+
+      <p class="htagline">خليك على طيعتك .. والباقي علينا!</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">قسم المنتجات</span><h2>أحدث التشكيلات</h2></div>
+        <p>اكتشف قطع مميزة تجمع بين الراحة والأناقة، مناسبة لكل يوم ولكل مناسبة.</p>
+      </div>
+      <div id="productsGrid" class="product-grid"></div>
+
+    </div>
+  </section>
+
+  <!-- BAGS -->
+  <section id="bags" class="section alt-section">
+    <div class="container split-grid">
+      <div>
+        <span class="eyebrow">قسم الشنط</span>
+        <h2>شنط تكمل أناقتك</h2>
+        <p>تصاميم عصرية بخامات عالية الجودة، تناسب كل ستايل وكل وقت.</p>
+        <div class="feature-list">
+          <span>خامات ممتازة</span><span>تصميم عملي</span><span>سهل التنسيق</span>
+        </div>
+      </div>
+      <div id="bagsGrid" class="mini-grid"></div>
+    </div>
+  </section>
+
+  <!-- AI STYLIST -->
+  <section id="ai" class="section ai-section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">قسم الـ AI</span>
+        <h2>خليك على طبيعتك… والباقي علينا</h2>
+        <p>جاوب على كام سؤال بسيط، وخلي الذكاء الاصطناعي يرشح لك اللوك المثالي.</p>
+      </div>
+      <div class="ai-layout">
+        <div class="ai-panel intro-panel">
+          <div class="intro-img-wrap"><img src="images/49.jpeg" alt="AI Stylist" /></div>
+          <div class="intro-body">
+            <h3>Smart Stylist AI</h3>
+            <p>جاوب على ٤ أسئلة بسيطة واحصل على لوك مخصوص ليكِ.</p>
+            <button id="startAiBtn" class="btn btn-dark full-width">ابدأ تجربتك الآن</button>
+            <div class="benefits">
+              <div>ترشيحات فورية</div><div>تنسيق كامل</div><div>تجربة ممتعة</div>
             </div>
           </div>
-          <div class="mix-card">
-            <div class="mix-img-wrap">
-              <img src="images/27.jpeg" alt="ستايل شغل" />
-            </div>
-            <div class="mix-text">
-              <h3>ستايل شغل</h3>
-              <p>بدلة رسمية جريئة + شنطة Structured</p>
-            </div>
+        </div>
+        <div class="ai-panel quiz-panel hidden" id="quizPanel">
+          <div class="quiz-progress">
+            <span id="stepLabel">السؤال 1 من 4</span>
+            <div class="progress-bar"><div id="progressFill"></div></div>
           </div>
-          <div class="mix-card">
-            <div class="mix-img-wrap">
-              <img src="images/26.jpeg" alt="ستايل سهرة" />
-            </div>
-            <div class="mix-text">
-              <h3>ستايل سهرة</h3>
-              <p>فستان طويل راقٍ + إكسسوارات خفيفة</p>
-            </div>
+          <h3 id="questionTitle"></h3>
+          <div id="answersBox" class="answers-box"></div>
+          <div class="quiz-actions"><button id="backBtn" class="btn btn-outline">السابق</button></div>
+        </div>
+        <div class="ai-panel result-panel hidden" id="resultPanel">
+          <span class="result-tag">نتيجة الـ AI</span>
+          <h3 id="resultStyle"></h3>
+          <p id="resultDesc"></p>
+          <div id="resultProducts" class="result-products"></div>
+          <div class="price-row"><span>السعر الإجمالي</span><strong id="totalPrice"></strong></div>
+          <div class="flex-actions">
+            <a href="#products" class="btn btn-dark">اشتري اللوك كامل</a>
+            <button id="retryBtn" class="btn btn-outline">جرّب مرة تانية</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section alt-section">
-      <div class="container">
-        <div class="section-head centered">
-          <span class="eyebrow">آراء العملاء</span>
-          <h2>رأي عملائنا</h2>
-        </div>
-        <div class="testimonials">
-          <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p>"الخامات ممتازة والتصميم شيك جدًا"</p>
-            <div class="testimonial-author"><span>سارة أحمد</span></div>
-          </article>
-          <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p>"الـ AI ساعدني أختار لبس مناسب بسرعة!"</p>
-            <div class="testimonial-author"><span>ريم محمد</span></div>
-          </article>
-          <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p>"التجربة كلها كانت سهلة وممتعة"</p>
-            <div class="testimonial-author"><span>نور علي</span></div>
-          </article>
-        </div>
+  <!-- MIX & MATCH -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">Mix & Match</span><h2>نفس القطعة… أكثر من ستايل</h2></div>
+        <p>اختاري قطعة واحدة وشوفي ٣ طرق مختلفة لتنسيقها.</p>
       </div>
-    </section>
+      <div class="mix-grid">
+        <div class="mix-card"><div class="mix-img-wrap"><img src="images/9.jpeg" alt="كاجوال"/></div><div class="mix-text"><h3>ستايل كاجوال</h3><p>قميص ناعم + جينز واسع + شنطة عملية</p></div></div>
+        <div class="mix-card"><div class="mix-img-wrap"><img src="images/10.jpeg" alt="شغل"/></div><div class="mix-text"><h3>ستايل شغل</h3><p>بدلة رسمية جريئة + شنطة Structured</p></div></div>
+        <div class="mix-card"><div class="mix-img-wrap"><img src="images/11.jpeg" alt="سهرة"/></div><div class="mix-text"><h3>ستايل سهرة</h3><p>فستان طويل راقٍ + إكسسوارات خفيفة</p></div></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container contact-box">
-        <div>
-          <span class="eyebrow">تواصل معنا</span>
-          <h2>عندك سؤال أو محتاجة مساعدة؟</h2>
-          <p>فريقنا جاهز يساعدك في أي وقت. راسلينا وسنرد عليك في أقرب وقت ممكن.</p>
-        </div>
-        <form class="contact-form">
-          <input type="text" placeholder="الاسم" />
-          <input type="email" placeholder="البريد الإلكتروني" />
-          <textarea rows="4" placeholder="اكتبي رسالتك"></textarea>
-          <button type="button" class="btn btn-primary">إرسال</button>
-        </form>
+  <!-- TESTIMONIALS -->
+  <section class="section alt-section">
+    <div class="container">
+      <div class="section-head centered"><span class="eyebrow">آراء العملاء</span><h2>رأي عملائنا</h2></div>
+      <div class="testimonials">
+        <article class="testimonial-card"><div class="tstars">★★★★★</div><p>"الخامات ممتازة والتصميم شيك جدًا"</p><div class="tauthor"><span>سارة أحمد</span></div></article>
+        <article class="testimonial-card"><div class="tstars">★★★★★</div><p>"الـ AI ساعدني أختار لبس مناسب بسرعة!"</p><div class="tauthor"><span>ريم محمد</span></div></article>
+        <article class="testimonial-card"><div class="tstars">★★★★★</div><p>"التجربة كلها كانت سهلة وممتعة"</p><div class="tauthor"><span>نور علي</span></div></article>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-box">
+      <div>
+        <span class="eyebrow">تواصل معنا</span>
+        <h2>عندك سؤال أو محتاجة مساعدة؟</h2>
+        <p>فريقنا جاهز يساعدك في أي وقت.</p>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="الاسم" />
+        <input type="email" placeholder="البريد الإلكتروني" />
+        <textarea rows="4" placeholder="اكتبي رسالتك"></textarea>
+        <button type="button" class="btn btn-dark">إرسال</button>
+      </form>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <div>
-        <strong>3sTiTcH</strong>
-        <p>اختياراتك تعكسك… وإحنا بنكمّلها</p>
-      </div>
+      <div><strong>3sTiTcH</strong><p>اختياراتك تعكسك… وإحنا بنكمّلها</p></div>
       <div class="footer-links">
-        <a href="#home">الرئيسية</a>
-        <a href="#products">المتجر</a>
-        <a href="#ai">AI Stylist</a>
-        <a href="#contact">تواصل</a>
+        <a href="#home">الرئيسية</a><a href="#products">المتجر</a>
+        <a href="#ai">AI Stylist</a><a href="#contact">تواصل</a>
       </div>
     </div>
   </footer>
+
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-inner">
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="" alt="" />
+          <div class="modal-badge" id="modalBadge">New</div>
+        </div>
+        <div class="modal-info">
+          <span class="eyebrow" id="modalCategory">ملابس</span>
+          <h2 id="modalName"></h2>
+          <p id="modalDesc"></p>
+          <div class="modal-tags" id="modalTags"></div>
+          <div class="modal-price-row">
+            <span class="modal-price" id="modalPrice"></span>
+            <span class="modal-stock">✓ متوفر في المخزن</span>
+          </div>
+          <div class="modal-sizes">
+            <span class="modal-label">المقاس</span>
+            <div class="size-btns">
+              <button class="size-btn">XS</button>
+              <button class="size-btn active">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+          <div class="modal-qty-row">
+            <span class="modal-label">الكمية</span>
+            <div class="qty-ctrl">
+              <button class="qty-btn" id="qtyMinus">−</button>
+              <span id="qtyVal">1</span>
+              <button class="qty-btn" id="qtyPlus">+</button>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-dark modal-cart-btn" id="modalAddCart">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              أضف إلى السلة
+            </button>
+            <button class="btn btn-outline modal-wish-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="modal-perks">
+            <div class="perk"><span>شحن مجاني فوق ٥٠٠ ج.م</span></div>
+            <div class="perk"><span>إرجاع مجاني خلال ١٤ يوم</span></div>
+            <div class="perk"><span>دفع آمن ومشفّر</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
